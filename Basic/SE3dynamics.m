@@ -3,7 +3,7 @@ global uLINK
 
 w_c = uLINK(j).R * uLINK(j).c + uLINK(j).p;   % center of mass
 w_I = uLINK(j).R * uLINK(j).I * uLINK(j).R';  % inertia in world frame
-c_hat = hat(w_c);
+c_hat = Hat(w_c);
 Iww = w_I + uLINK(j).m * c_hat * c_hat';    
 Ivv = uLINK(j).m * eye(3);
 Iwv = uLINK(j).m * c_hat;

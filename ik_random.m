@@ -30,10 +30,10 @@ while 1
     uLINK(BODY).R = eye(3);
 
     Rfoot.p = [0, -0.1, 0]' + 0.2*(rand(3,1)-0.5);
-    Rfoot.R = RPY2R(1/2*pi*(rand(3,1)-0.5));  %  -pi/4 < q < pi/4
+    Rfoot.R = Rpy2R(1/2*pi*(rand(3,1)-0.5));  %  -pi/4 < q < pi/4
 
     Lfoot.p = [0, 0.1, 0]' + 0.1*(rand(3,1)-0.5);
-    Lfoot.R = RPY2R(1/2*pi*(rand(3,1)-0.5)); %  -pi/4 < q < pi/4
+    Lfoot.R = Rpy2R(1/2*pi*(rand(3,1)-0.5)); %  -pi/4 < q < pi/4
 
     %%% Analytical inverse kinematics solution
     qR2 = IK_leg(uLINK(BODY),-0.1,0.3,0.3,Rfoot);

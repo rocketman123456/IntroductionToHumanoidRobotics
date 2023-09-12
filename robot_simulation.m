@@ -36,7 +36,7 @@ for k = 1:tsize
     ForwardDynamics; 
     
     IntegrateEuler(1);    
-    com = calcCoM;
+    com = CalcCoM;
     com_m(k,:) = com';
     
     hold off

@@ -1,5 +1,6 @@
-function rot = rpy2rot(roll,pitch,yaw)
+function rot = Rpy2R(rpy)
 
+roll = rpy(1); pitch = rpy(2); yaw = rpy(3);
 Cphi = cos(roll);  Sphi = sin(roll);
 Cthe = cos(pitch); Sthe = sin(pitch);
 Cpsi = cos(yaw);   Spsi = sin(yaw);

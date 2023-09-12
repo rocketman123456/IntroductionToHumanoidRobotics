@@ -1,4 +1,4 @@
-function [px,py] = calcZMP(c,dP,dL,pz)
+function [px,py] = CalcZMP(c,dP,dL,pz)
 global M G 
 
 px = (M*G*c(1) + pz * dP(1) - dL(2))/(M*G + dP(3));

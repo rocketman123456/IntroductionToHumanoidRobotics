@@ -1,4 +1,4 @@
-function w = rot2omega(R)
+function w = Rot2Omega(R)
 % T.Sugihara "Solvability-unconcerned Inverse Kinemacics based on 
 % Levenberg-Marquardt method with Robust Damping," Humanoids 2009
 

@@ -58,13 +58,13 @@ zlabel('z')
 figure
 subplot(211)
 h = plot(time,vo_m);
-setLineProperty(h)
+SetLineProperty(h)
 legend('vo_x','vo_y','vo_z')
 ylabel('vo [m/s]')
 
 subplot(212)
 h = plot(time,P_m);
-setLineProperty(h)
+SetLineProperty(h)
 legend('Px','Py','Pz')
 ylabel('P [Ns]')
 xlabel('time [s]')

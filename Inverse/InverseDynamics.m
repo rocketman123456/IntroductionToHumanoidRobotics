@@ -9,7 +9,7 @@ end
 
 c = uLINK(j).R * uLINK(j).c + uLINK(j).p;   % center of mass
 I = uLINK(j).R * uLINK(j).I * uLINK(j).R';  % inertia in world frame
-c_hat = hat(c);
+c_hat = Hat(c);
 I = I + uLINK(j).m * c_hat * c_hat'; 
 
 P = uLINK(j).m * (uLINK(j).vo + cross(uLINK(j).w,c));   % linear  momentum

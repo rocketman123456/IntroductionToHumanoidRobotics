@@ -30,14 +30,14 @@ InverseKinematicsAll(RLEG_J5, Rfoot);
 InverseKinematicsAll(LLEG_J5, Lfoot);
 ForwardVelocity(1);
 
-com = calcCoM;     % Center of mass
+com = CalcCoM;     % Center of mass
 Zc  = com(3);      % Height of the linear inverted pendulum (LIPM)
 Tc  = sqrt(Zc/G);  % Time constant of LIPM
 cx0 = com(1);
 cy0 = com(2);
 
-P1 = calcP(1);
-L1 = calcL(1);
+P1 = CalcP(1);
+L1 = CalcL(1);
 
 
 global Dtime 
@@ -62,13 +62,13 @@ for k = 1:tsize
     ForwardVelocity(1);    
     
     %%% Calculate ZMP
-    com = calcCoM;    % Center of mass
-    P   = calcP(1);   % Linear momentum
-    L   = calcL(1);   % Angular momentum
+    com = CalcCoM;    % Center of mass
+    P   = CalcP(1);   % Linear momentum
+    L   = CalcL(1);   % Angular momentum
     
     dP = (P-P1)/Dtime;
     dL = (L-L1)/Dtime;
-    [zmpx,zmpy] = calcZMP(com,dP,dL,zmpz);
+    [zmpx,zmpy] = CalcZMP(com,dP,dL,zmpz);
     P1 = P;
     L1 = L;
    

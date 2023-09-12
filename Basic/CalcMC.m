@@ -1,9 +1,9 @@
-function mc = calcMC(j)
+function mc = CalcMC(j)
 global uLINK
 
 if j == 0
     mc = 0;
 else
     mc = uLINK(j).m * (uLINK(j).p + uLINK(j).R * uLINK(j).c);
-    mc = mc + calcMC(uLINK(j).sister) + calcMC(uLINK(j).child);
+    mc = mc + CalcMC(uLINK(j).sister) + CalcMC(uLINK(j).child);
 end

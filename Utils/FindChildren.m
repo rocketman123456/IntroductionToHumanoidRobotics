@@ -1,3 +1,6 @@
+% function FindChildren()
+% global uLINK
+
 num = length(uLINK);
 
 for n=1:num
